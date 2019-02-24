@@ -1,0 +1,15 @@
+.hero {
+  position: relative;
+  padding: 3rem 1rem 4rem;
+
+  &__title {
+    font-size: 34px;
+    line-height: 36px;
+    margin-bottom: 0.75rem;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

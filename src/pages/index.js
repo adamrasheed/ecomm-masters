@@ -9,6 +9,7 @@ import Intro from "../components/page-index/Intro"
 import BenefitsIntro from "../components/page-index/BenefitsIntro.js"
 import Benefits from "../components/page-index/Benefits"
 import Button from "../components/global/Button"
+import Form from "../components/Form.js/Form"
 
 class IndexPage extends React.Component {
   scrollTop() {
@@ -19,16 +20,18 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Hero />
+        {/* FORM */}
+        <div className="form-wrapper">
+          <Form />
+        </div>
         <Intro />
         <BenefitsIntro />
         <Benefits />
-        <Button onClick={this.scrollTop}>Back to Top</Button>
+        <button className="button" onClick={this.scrollTop}>
+          Back to Top
+        </button>
 
         {/*
-      - Form
-       -Video
-       - Intro 
-       - Benefits
        - Footer
     */}
       </Layout>

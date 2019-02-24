@@ -5,7 +5,7 @@ const Benefits = () => {
     <div className="benefits">
       <Benefit
         number="1"
-        title="Setting Up Shopify Partner Account"
+        title="Setting Up Your Shopify Partner Account"
         body="You’ll kick things off by learning how to download and use Shopify’s own theme-scaffolding tool called Slate."
       />
       <Benefit

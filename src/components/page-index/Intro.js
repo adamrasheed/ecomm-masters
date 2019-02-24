@@ -1,8 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 const Intro = () => {
   return (
     <div className="intro-section">
-      <h2>
+      <h2 className="grad-title intro-section__title">
         Learn how to develop for the most client-friendly eCommerce platform out
         there.
       </h2>

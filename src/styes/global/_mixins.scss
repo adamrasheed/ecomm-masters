@@ -1,0 +1,16 @@
+@mixin media-small {
+  @media screen and (min-width: map-get( $media, sml )) {
+    @content;
+  }
+}
+@mixin media-tablet {
+  @media screen and (min-width: map-get( $media, med )) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media screen and (min-width: map-get( $media, lrg )) {
+    @content;
+  }
+}

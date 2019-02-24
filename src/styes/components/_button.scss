@@ -1,0 +1,21 @@
+.button {
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-align: center;
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  color: $color-text;
+  border: none;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+
+  &--primary {
+    background: $color-accent-primary;
+    &:hover,
+    &:focus {
+      background: lighten($color-accent-primary, 3%);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.blob {
+  position: absolute;
+  z-index: -1;
+
+  &--1 {
+    top: 1rem;
+    left: -1rem;
+  }
+
+  &--2 {
+    top: 6rem;
+    right: 0.25rem;
+  }
+
+  &--3 {
+    top: 10.5rem;
+    left: -5rem;
+  }
+}

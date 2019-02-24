@@ -1,7 +1,9 @@
-import React, { Children } from "react"
+import React from "react"
 const Button = ({ link, children }) => {
   return link ? (
-    <a href="" className="button" />
+    <a href={link} className="button">
+      {children}
+    </a>
   ) : (
     <button className="button">{children}</button>
   )
