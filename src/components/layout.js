@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
           <Header siteTitle={data.site.siteMetadata.title} />
 
           <main>{children}</main>
-          <footer className="center small">
+          <footer className="center small footer">
             © {new Date().getFullYear()},{" "}
             <a
               href="https://adamrasheed,com"
@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
               Adam Rasheed
             </a>
             {"    "}
-            Not affiliated with Shopify®
+            <span>Not affiliated with Shopify®</span>
           </footer>
         </>
       )}

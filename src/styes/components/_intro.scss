@@ -10,4 +10,24 @@
     padding: 0 1rem;
     margin-bottom: 1rem;
   }
+
+  @include media-phone-large {
+    &__title,
+    p {
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+    &__title {
+      margin-bottom: 0.25rem;
+
+      &::after {
+        top: 0;
+        height: 3rem;
+      }
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
 }

@@ -27,7 +27,7 @@ class IndexPage extends React.Component {
         <Intro />
         <BenefitsIntro />
         <Benefits />
-        <button className="button" onClick={this.scrollTop}>
+        <button className="button back-to-top" onClick={this.scrollTop}>
           Back to Top
         </button>
 

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Video from "./Video"
 import Blob1 from "../../images/blob1.svg"
 import Blob2 from "../../images/blob2.svg"
 import Blob3 from "../../images/blob3.svg"
@@ -10,9 +11,10 @@ const Hero = () => {
       <img src={Blob3} alt="" className="blob blob--3" />
       <h1 className="hero__title">Learn to Develop Shopify Themes.</h1>
       <h2 className="hero__subtitle">
-        Get The Free 5-part Crash Course on Developing Custom Themes for
-        Shopify.
+        Get The Free 5-part Crash Course for Developing Custom Shopify Themes.
       </h2>
+
+      <Video />
     </div>
   )
 }

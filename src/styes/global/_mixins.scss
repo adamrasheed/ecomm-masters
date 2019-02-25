@@ -1,5 +1,11 @@
-@mixin media-small {
+@mixin media-phone {
   @media screen and (min-width: map-get( $media, sml )) {
+    @content;
+  }
+}
+
+@mixin media-phone-large {
+  @media screen and (min-width: map-get( $media, sml-med )) {
     @content;
   }
 }
