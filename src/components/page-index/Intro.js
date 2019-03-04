@@ -21,7 +21,12 @@ const Intro = () => {
           clients to easily maintain?
         </p>
         <p>
-          <strong>Reach for Shopify. 🙌</strong>
+          <strong>
+            Reach for Shopify.{" "}
+            <span role="img" aria-label="raised hands">
+              🙌
+            </span>
+          </strong>
         </p>
       </div>
     </div>

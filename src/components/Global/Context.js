@@ -4,11 +4,6 @@ import { ConvertKitSubscribe } from "../Global/ConvertKit"
 import { SubscriptionStatus } from "../../utils/handleSubscribe"
 export const GlobalContext = React.createContext()
 
-const formMessages = {
-  succes: ``,
-  noEmail: `Please enter an Email`,
-}
-
 class GlobalProvider extends React.Component {
   state = {
     signedUp: false,
@@ -18,16 +13,27 @@ class GlobalProvider extends React.Component {
     formMsg: ``,
     subscriber: {},
   }
+  formRef = React.createRef()
   handleInputChange = event => {
     const { name, value } = event.target
     this.setState({ [name]: value, formStatus: null, formMsg: `` })
   }
 
+  scrollToForm = () => {
+    const offset = this.formRef.current.offsetTop
+    const adjustedOffset = offset - 32 - 16
+    // window.scrollY()
+    window.scrollTo({
+      top: adjustedOffset,
+      behavior: "smooth",
+    })
+    console.log(adjustedOffset)
+    console.log("clicckeedd")
+  }
+
   handleSubmit = event => {
-    const { target } = event
     const { inputName, inputEmail } = this.state
     event.preventDefault()
-    const email = this.state.inputEmail
     const packet = {
       first_name: inputName ? inputName : null,
       email: inputEmail,
@@ -61,6 +67,8 @@ class GlobalProvider extends React.Component {
           state: this.state,
           handleInput: this.handleInputChange,
           handleSubmit: this.handleSubmit,
+          scrollToForm: this.scrollToForm,
+          formRef: this.formRef,
         }}
       >
         {this.props.children}

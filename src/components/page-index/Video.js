@@ -1,9 +1,10 @@
-import React, { Component } from "react"
+import React from "react"
 
 const Video = () => {
   return (
     <div className="video-background">
       <iframe
+        title="Intro Video"
         className="video hero-video"
         src="https://www.youtube.com/embed/pUvuHNG2vWE"
         frameBorder="0"

@@ -75,6 +75,10 @@
 
 .form-msg {
   font-weight: 500;
-  margin: 1rem auto;
+  margin: 1.25rem auto 0;
   text-align: center;
+
+  &--success {
+    color: $color-success;
+  }
 }

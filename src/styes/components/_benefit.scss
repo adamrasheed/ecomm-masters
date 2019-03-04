@@ -25,11 +25,13 @@
   }
 
   &__title {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-weight: 700;
   }
 
   &__body {
     margin: 0;
+    line-height: 1.5;
   }
 }

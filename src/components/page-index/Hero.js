@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import Video from "./Video"
 import Blob1 from "../../images/blob1.svg"
 import Blob2 from "../../images/blob2.svg"

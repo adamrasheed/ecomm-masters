@@ -16,4 +16,21 @@
     top: 22.5rem;
     left: -5rem;
   }
+
+  @include media-laptop {
+    &--1 {
+      left: 15%;
+      top: 2rem;
+    }
+
+    &--2 {
+      right: 15%;
+    }
+
+    &--3 {
+      left: 15%;
+      top: unset;
+      bottom: 2rem;
+    }
+  }
 }
