@@ -1,11 +1,13 @@
 import React from "react"
-const Button = ({ link, children }) => {
+const Button = ({ link, children, ...props }) => {
   return link ? (
     <a href={link} className="button">
       {children}
     </a>
   ) : (
-    <button className="button">{children}</button>
+    <button {...props} className="button">
+      {children}
+    </button>
   )
 }
 

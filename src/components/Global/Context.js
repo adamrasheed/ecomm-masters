@@ -60,6 +60,11 @@ class GlobalProvider extends React.Component {
       .catch(err => console.log(err))
   }
 
+  handleHeroCta = event => {
+    const form = this.formRef.current
+    console.log("yoooo")
+  }
+
   render() {
     return (
       <GlobalContext.Provider
@@ -69,6 +74,7 @@ class GlobalProvider extends React.Component {
           handleSubmit: this.handleSubmit,
           scrollToForm: this.scrollToForm,
           formRef: this.formRef,
+          handleHeroCta: this.handleHeroCta,
         }}
       >
         {this.props.children}

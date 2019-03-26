@@ -10,12 +10,13 @@
   border: none;
   text-transform: uppercase;
   transition: all 0.15s ease-in-out;
+  cursor: pointer;
 
   &--primary {
-    background: $color-accent-primary;
+    background: #dca92d;
     &:hover,
     &:focus {
-      background: lighten($color-accent-primary, 3%);
+      background: lighten(#dca92d, 3%);
     }
   }
 }

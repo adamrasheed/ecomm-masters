@@ -1,4 +1,5 @@
 @import "./global/reset";
+@import "./global/fonts";
 @import "./global/variables";
 @import "./global/mixins";
 @import "./global/global";
@@ -11,13 +12,16 @@
 @import "./components/intro";
 @import "./components/benefits";
 @import "./components/benefit";
+@import "./components/form-section";
 @import "./components/footer";
 
 body {
+  background: $color-background-light;
+  color: $color-text;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "GTAmerica", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .back-to-top {

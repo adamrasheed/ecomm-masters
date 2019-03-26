@@ -1,16 +1,14 @@
 .benefit {
   max-width: 32rem;
+  background: $color-background-dark;
+  color: $color-text-light;
 
   display: flex;
-  padding: 0;
+  padding: 1rem 1.375rem;
   margin: 0 auto 1.75rem;
 
-  @include media-phone-large {
-    padding: 0 1rem;
-  }
-
   @include media-tablet {
-    margin: 0 auto 2.25rem;
+    margin: 0 initial 2.25rem;
   }
 
   &:last-child {
@@ -25,9 +23,18 @@
   }
 
   &__title {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 700;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin: 0.5rem 0;
+      background: $color-text-light;
+    }
   }
 
   &__body {

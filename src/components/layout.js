@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import GlobalProvider from "./Global/Context"
 import { StaticQuery, graphql } from "gatsby"
 
-import "../styes/main.scss"
+import "../fonts.css"
+import "../styles/main.scss"
 
 import Header from "./header"
 
@@ -17,12 +18,18 @@ const Layout = ({ children }) => (
               title
             }
           }
+          file(relativePath: { eq: "royal-palm.png" }) {
+            childImageSharp {
+              fluid(maxHeight: 1440) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       `}
       render={data => (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
-
           <main>{children}</main>
           <footer className="center small footer">
             © {new Date().getFullYear()},{" "}

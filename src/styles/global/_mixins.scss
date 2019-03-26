@@ -20,3 +20,9 @@
     @content;
   }
 }
+
+@mixin media-desktop {
+  @media screen and (min-width: map-get( $media, xxlg )) {
+    @content;
+  }
+}

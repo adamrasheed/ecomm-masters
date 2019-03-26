@@ -1,0 +1,30 @@
+$ns: ".form-section";
+
+#{$ns} {
+  background: $color-background-dark;
+  color: $color-text-light;
+  padding: 2rem 1rem 3rem;
+  position: relative;
+  overflow: hidden;
+
+  &__pattern {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 8rem);
+    z-index: 0;
+    opacity: 0.45;
+  }
+
+  @include media-tablet {
+    padding: 2rem 1rem;
+    #{$ns}__pattern {
+      left: calc(0% - 26rem);
+    }
+  }
+
+  @include media-desktop {
+    #{$ns}__pattern {
+      left: calc(0% - 23rem);
+    }
+  }
+}

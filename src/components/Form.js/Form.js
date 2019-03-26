@@ -10,15 +10,40 @@ class Form extends Component {
     return (
       <GlobalContext.Consumer>
         {context => (
-          <>
+          <div className="form-wrapper">
+            <h2 className="form__title">
+              Sign Up and Learn How to Create Custom Shopify Themes Today!
+            </h2>
             <form
               ref={context.formRef}
               action=""
               className="form"
               onSubmit={context.handleSubmit}
             >
-              <Input label="First Name" name="inputName" />
-              <Input label="Email" name="inputEmail" type="email" required />
+              <Input label="First Name" name="inputName" id="inputName" />
+              <Input
+                label="Email"
+                name="inputEmail"
+                id="inputEmail"
+                type="email"
+                required
+                placeholder="westboss@raddev.com"
+              />
+              <div className="form__checkbox-wrapper">
+                <input
+                  type="checkbox"
+                  className="form__checkbox"
+                  name="inputAcceptsMarketing"
+                  id="inputAcceptsMarketing"
+                />
+                <label
+                  htmlFor="inputAcceptsMarketing"
+                  className="form__checkbox-label"
+                >
+                  I’d like to be notified when a Premium Course gets Launched
+                </label>
+                <div className="form__checkbox-box checkmark" />
+              </div>
               <input
                 type="submit"
                 value="Send Me The Crash Course"
@@ -38,7 +63,7 @@ class Form extends Component {
               )}
             </form>
             <p className="small form__disclaimer">We value your privacy</p>
-          </>
+          </div>
         )}
       </GlobalContext.Consumer>
     )

@@ -3,18 +3,21 @@ import { GlobalContext } from "../Global/Context"
 class Input extends Component {
   state = {}
   render() {
-    const { label, name, type, required } = this.props
+    const { label, name, id, type, required, placeholder } = this.props
     return (
       <GlobalContext.Consumer>
         {context => (
           <>
-            <label htmlFor={name} className="form__label">
+            <label htmlFor={id} className="form__label">
               {label}
+              {required && `*`}
             </label>
             <input
               type={type ? type : `text`}
               name={name}
-              className="form__input"
+              id={id}
+              className={`form__input${name ? ` form__input--${name}` : ``}`}
+              placeholder={placeholder}
               value={context.state[name]}
               onChange={context.handleInput}
               required={required}
