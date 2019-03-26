@@ -9,14 +9,25 @@ class GlobalProvider extends React.Component {
     signedUp: false,
     inputName: ``,
     inputEmail: ``,
+    inputAcceptsMarketing: false,
     formStatus: null,
     formMsg: ``,
     subscriber: {},
   }
   formRef = React.createRef()
+
   handleInputChange = event => {
     const { name, value } = event.target
     this.setState({ [name]: value, formStatus: null, formMsg: `` })
+  }
+
+  handleInputCheckbox = event => {
+    const { checked } = event.target
+    console.log(event.target)
+    this.setState({
+      inputAcceptsMarketing: !this.state.inputAcceptsMarketing,
+    })
+    console.log(this.state.inputAcceptsMarketing)
   }
 
   scrollToForm = () => {
@@ -32,11 +43,14 @@ class GlobalProvider extends React.Component {
   }
 
   handleSubmit = event => {
-    const { inputName, inputEmail } = this.state
+    const { inputName, inputEmail, inputAcceptsMarketing } = this.state
     event.preventDefault()
     const packet = {
       first_name: inputName ? inputName : null,
       email: inputEmail,
+      fields: {
+        accepts_marketing: inputAcceptsMarketing,
+      },
       tags: `804695`,
     }
 
@@ -62,7 +76,9 @@ class GlobalProvider extends React.Component {
 
   handleHeroCta = event => {
     const form = this.formRef.current
-    console.log("yoooo")
+    const offset = document.body.scrollHeight
+    console.log("clicked")
+    window.scrollTo({ top: offset, behavior: "smooth" })
   }
 
   render() {
@@ -71,6 +87,7 @@ class GlobalProvider extends React.Component {
         value={{
           state: this.state,
           handleInput: this.handleInputChange,
+          handleInputChecbkox: this.handleInputCheckbox,
           handleSubmit: this.handleSubmit,
           scrollToForm: this.scrollToForm,
           formRef: this.formRef,

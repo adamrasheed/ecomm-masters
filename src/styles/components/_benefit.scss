@@ -11,6 +11,14 @@
     margin: 0 initial 2.25rem;
   }
 
+  @include media-laptop {
+    transition: all 0.15s ease-in-out;
+    box-shadow: none;
+    &:hover {
+      box-shadow: -8px 8px 0 0 rgba(#7d6c42, 0.5);
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }

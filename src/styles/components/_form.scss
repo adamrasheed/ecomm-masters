@@ -76,7 +76,6 @@
       font-weight: 300;
     }
 
-    &:hover,
     &:focus {
       outline: 0;
       box-shadow: inset 0 0 0 2px $color-text-light;
@@ -94,6 +93,15 @@
         margin-left: 1rem;
         max-width: unset;
         flex: 1;
+      }
+    }
+
+    @include media-laptop {
+      padding: 1rem;
+      box-shadow: inset 0 0 0 2px $color-text-light;
+
+      &:focus {
+        box-shadow: inset 0 0 0 3px $color-text-light;
       }
     }
   }
@@ -123,8 +131,9 @@
   &__checkbox-label {
     margin-left: 1rem;
     font-size: 0.875rem;
-    line-height: 1rem;
+    line-height: 1.125rem;
     cursor: pointer;
+    flex: 1 1 0%;
   }
 
   &__checkbox-box {
@@ -158,6 +167,13 @@
       width: calc(100% - 0.5rem);
       bottom: 0.25rem;
       left: 0.25rem;
+    }
+
+    @include media-laptop {
+      &.button {
+        width: fit-content;
+        padding: 1rem 3rem;
+      }
     }
   }
 

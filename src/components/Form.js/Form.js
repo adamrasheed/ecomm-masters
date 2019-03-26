@@ -12,7 +12,7 @@ class Form extends Component {
         {context => (
           <div className="form-wrapper">
             <h2 className="form__title">
-              Sign Up and Learn How to Create Custom Shopify Themes Today!
+              Sign Up &amp; Learn How to Create Custom Shopify Themes Today!
             </h2>
             <form
               ref={context.formRef}
@@ -35,12 +35,14 @@ class Form extends Component {
                   className="form__checkbox"
                   name="inputAcceptsMarketing"
                   id="inputAcceptsMarketing"
+                  checked={context.state.inputAcceptsMarketing}
+                  onChange={context.handleInputChecbkox}
                 />
                 <label
                   htmlFor="inputAcceptsMarketing"
                   className="form__checkbox-label"
                 >
-                  I’d like to be notified when a Premium Course gets Launched
+                  I’d like to be notified when a premium course gets Launched
                 </label>
                 <div className="form__checkbox-box checkmark" />
               </div>
