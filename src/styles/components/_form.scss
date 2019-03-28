@@ -21,6 +21,10 @@
 
 .form {
   position: relative;
+
+  &.was-submitted {
+    display: none;
+  }
   @include media-tablet {
     display: flex;
     justify-content: flex-start;
@@ -38,6 +42,10 @@
     @include media-tablet {
       font-weight: 900;
       margin-bottom: 3rem;
+
+      &.was-submitted {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -190,5 +198,7 @@
 
   &--success {
     color: $color-success;
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
   }
 }

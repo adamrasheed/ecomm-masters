@@ -11,13 +11,17 @@ class Form extends Component {
       <GlobalContext.Consumer>
         {context => (
           <div className="form-wrapper">
-            <h2 className="form__title">
+            <h2
+              className={`form__title ${context.state.formStatus ===
+                `success` && `was-submitted`}`}
+            >
               Sign Up &amp; Learn How to Create Custom Shopify Themes Today!
             </h2>
             <form
               ref={context.formRef}
               action=""
-              className="form"
+              className={`form ${context.state.formStatus === `success` &&
+                `was-submitted`}`}
               onSubmit={context.handleSubmit}
             >
               <Input label="First Name" name="inputName" id="inputName" />
@@ -51,19 +55,19 @@ class Form extends Component {
                 value="Send Me The Crash Course"
                 className="button button--primary form__submit"
               />
-              {context.state.formMsg && (
-                <p className="small form-msg">{context.state.formMsg}</p>
-              )}
-              {context.state.formStatus === `success` && (
-                <p className="small form-msg form-msg--success">
-                  {context.state.inputName
-                    ? `Thanks for signing up ${capitalize(
-                        context.state.inputName
-                      )}!`
-                    : `Thanks for signing up!`}
-                </p>
-              )}
             </form>
+            {context.state.formMsg && (
+              <p className="small form-msg">{context.state.formMsg}</p>
+            )}
+            {context.state.formStatus === `success` && (
+              <p className="small form-msg form-msg--success">
+                {context.state.inputName
+                  ? `Thanks for signing up, ${capitalize(
+                      context.state.inputName
+                    )}!`
+                  : `Thanks for signing up!`}
+              </p>
+            )}
             <p className="small form__disclaimer">We value your privacy</p>
           </div>
         )}

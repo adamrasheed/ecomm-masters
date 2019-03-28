@@ -11,7 +11,11 @@ import { GlobalContext } from "../components/Global/Context"
 import FormSection from "../components/page-index/FormSection"
 
 class IndexPage extends React.Component {
+  queryParam() {
+    let url = window.location.search
+  }
   render() {
+    this.queryParam()
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />

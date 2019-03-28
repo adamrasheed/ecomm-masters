@@ -57,7 +57,9 @@ class GlobalProvider extends React.Component {
     axios
       .post(ConvertKitSubscribe, packet)
       .then(({ status, data }) => {
+        console.log(data)
         const sucessfulSubmission = SubscriptionStatus(status)
+
         if (sucessfulSubmission) {
           const { email_address, first_name } = data.subscription.subscriber
           this.setState({
@@ -72,6 +74,11 @@ class GlobalProvider extends React.Component {
         console.log(this.state)
       })
       .catch(err => console.log(err))
+  }
+
+  addQueryParam = () => {
+    let url = window.location.href
+    console.log(window.location)
   }
 
   handleHeroCta = event => {
