@@ -1,6 +1,4 @@
 import React from "react"
-import Video from "./Video"
-import { StaticQuery, graphql } from "gatsby"
 import ArrowRight from "../../images/long-arrow-right-light.svg"
 import topography from "../../images/topography.svg"
 import { GlobalContext } from "../Global/Context"

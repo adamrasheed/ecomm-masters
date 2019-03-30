@@ -22,8 +22,6 @@ class GlobalProvider extends React.Component {
   }
 
   handleInputCheckbox = event => {
-    const { checked } = event.target
-    console.log(event.target)
     this.setState({
       inputAcceptsMarketing: !this.state.inputAcceptsMarketing,
     })
@@ -77,12 +75,12 @@ class GlobalProvider extends React.Component {
   }
 
   addQueryParam = () => {
-    let url = window.location.href
+    // let url = window.location.href
     console.log(window.location)
   }
 
   handleHeroCta = event => {
-    const form = this.formRef.current
+    // const form = this.formRef.current
     const offset = document.body.scrollHeight
     console.log("clicked")
     window.scrollTo({ top: offset, behavior: "smooth" })
