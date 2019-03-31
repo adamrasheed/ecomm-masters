@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
           <footer className="center small footer">
             © {new Date().getFullYear()},{" "}
             <a
-              href="https://adamrasheed,com"
+              href="https://adamrasheed.com"
               target="_blank"
               rel="noopener noreferrer"
             >
