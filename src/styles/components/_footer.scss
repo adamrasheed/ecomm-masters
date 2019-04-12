@@ -1,8 +1,41 @@
 .footer {
   text-align: center;
   padding: 1rem;
+  display: block;
+
+  @include media-phone-large {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $container-size;
+    margin: 0 auto;
+  }
 
   span {
-    margin: 0 0.5rem;
+    margin: 0.5rem;
+    display: block;
+
+    @include media-phone-large {
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.footer-nav {
+  display: block;
+  flex: 100%;
+  margin: 1rem 0;
+  padding: 0 1rem;
+
+  &__link {
+    margin: 0 0.25rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      outline: 0;
+    }
   }
 }

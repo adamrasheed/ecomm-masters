@@ -25,7 +25,6 @@ class GlobalProvider extends React.Component {
     this.setState({
       inputAcceptsMarketing: !this.state.inputAcceptsMarketing,
     })
-    console.log(this.state.inputAcceptsMarketing)
   }
 
   scrollToForm = () => {
@@ -36,8 +35,6 @@ class GlobalProvider extends React.Component {
       top: adjustedOffset,
       behavior: "smooth",
     })
-    console.log(adjustedOffset)
-    console.log("clicckeedd")
   }
 
   handleSubmit = event => {
@@ -82,7 +79,6 @@ class GlobalProvider extends React.Component {
   handleHeroCta = event => {
     // const form = this.formRef.current
     const offset = document.body.scrollHeight
-    console.log("clicked")
     window.scrollTo({ top: offset, behavior: "smooth" })
   }
 

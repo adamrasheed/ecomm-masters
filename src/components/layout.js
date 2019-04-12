@@ -7,6 +7,7 @@ import "../fonts.css"
 import "../styles/main.scss"
 
 import Header from "./header"
+import FooterNav from "./Global/footerNav"
 
 const Layout = ({ children }) => (
   <GlobalProvider>
@@ -32,16 +33,20 @@ const Layout = ({ children }) => (
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
           <footer className="center small footer">
-            © {new Date().getFullYear()},{" "}
-            <a
-              href="https://adamrasheed.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Adam Rasheed
-            </a>
-            {"    "}
-            <span>Not affiliated with Shopify®</span>
+            <div className="footer__credits">
+              © {new Date().getFullYear()},{" "}
+              <a
+                href="https://adamrasheed.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Adam Rasheed
+              </a>
+              {"    "}
+              <span>Not affiliated with Shopify®</span>
+            </div>
+
+            <FooterNav />
           </footer>
         </>
       )}

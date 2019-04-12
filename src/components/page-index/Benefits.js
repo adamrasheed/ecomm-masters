@@ -21,7 +21,7 @@ const Benefits = () => {
         <Benefit
           number="1"
           title="Setting Up Your Shopify Partner Account"
-          body="You’ll kick things off by learning how to download and use Shopify’s own theme-scaffolding tool called Slate."
+          body="You’ll kick things off by learning how to create your own Shopify Partner account so oyu can start developing stores for yourself or clients."
         />
         <Benefit
           number="2"
@@ -30,18 +30,18 @@ const Benefits = () => {
         />
         <Benefit
           number="3"
-          title="Creating Your First Product Page"
-          body="You’ll kick things off by learning how to download and use Shopify’s own theme-scaffolding tool called Slate."
+          title="Developing The Home Page & Product Page"
+          body="This lesson will show you develop the home page and product page with Shopify Sections. You'll also learn how you can use Shopify sections to allow your clients to customize what they need without any code."
         />
         <Benefit
           number="4"
-          title="Collections Page"
-          body="You’ll kick things off by learning how to download and use Shopify’s own theme-scaffolding tool called Slate."
+          title="Developing The Collections Page"
+          body="This lesson with show your how to develop your collections page and add tag filters to let cusotmers easily find the products they're looking for. You'll also learn how to utilize javascript modules available in Slate."
         />
         <Benefit
           number="5"
-          title="Publishing Your Theme"
-          body="In the last video, you’ll learn how to publish your theme live."
+          title="Developing The Cart Page and Publishing Your Theme"
+          body="In this last video, you’ll learn the ins and outs of the cart page and learn how to easily make your theme live."
         />
       </div>
     </div>
