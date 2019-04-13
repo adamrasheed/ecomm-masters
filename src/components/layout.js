@@ -51,9 +51,9 @@ class Layout extends React.Component {
                 </div>
                 <FooterNav />
               </footer>
-              <div
+              <script
                 dangerouslySetInnerHTML={{
-                  __html: <script type="text/javascript">
+                  __html:
   (function() {
     window._pa = window._pa || {};
         
@@ -61,7 +61,6 @@ class Layout extends React.Component {
     pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.marinsm.com/serve/5cb16d62c10f65a1fc000003.js";
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
   })();
-</script>
                 }}
               />
             </>
