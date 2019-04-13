@@ -10,17 +10,7 @@ import Header from "./header"
 import FooterNav from "./Global/footerNav"
 
 class Layout extends React.Component {
-  perfectAudience() {
-    window._pa = window._pa || {}
-    var pa = document.createElement("script")
-    pa.type = "text/javascript"
-    pa.async = true
-    pa.src =
-      ("https:" == document.location.protocol ? "https:" : "http:") +
-      "//tag.marinsm.com/serve/5cb16d62c10f65a1fc000003.js"
-    var s = document.getElementsByTagName("script")[0]
-    s.parentNode.insertBefore(pa, s)
-  }
+  perfectAudience() {}
   render() {
     const { children } = this.props
     return (
@@ -59,9 +49,14 @@ class Layout extends React.Component {
                   {"    "}
                   <span>Not affiliated with Shopify®</span>
                 </div>
-                {this.perfectAudience()}
                 <FooterNav />
               </footer>
+              <script dangerouslySetInnerHTML={{(function() {
+    window._pa = window._pa || {};
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.marinsm.com/serve/5cb16d62c10f65a1fc000003.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();}} />
             </>
           )}
         />
