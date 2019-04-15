@@ -4,10 +4,13 @@ module.exports = {
     description: `Learn how to develop custom Shopify themes with this free 5-part crash course video tutorial series.`,
     author: `@arasheedphoto`,
     image: `src/images/metaImage.png`,
+    url: `https://ecommmasters.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,8 +18,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

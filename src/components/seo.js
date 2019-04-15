@@ -11,6 +11,7 @@ function SEO({ description, lang, image, meta, keywords, title }) {
         const metaDescription =
           description || data.site.siteMetadata.description
         const metaImage = image || data.metaImage.childImageSharp.fixed.src
+        console.log(`${data.site.siteMetadata.url}${metaImage}`)
         return (
           <Helmet
             htmlAttributes={{
@@ -49,7 +50,7 @@ function SEO({ description, lang, image, meta, keywords, title }) {
               },
               {
                 name: `twitter:image`,
-                content: metaImage,
+                content: `${data.site.siteMetadata.url}${metaImage}`,
               },
               {
                 name: `twitter:description`,
@@ -96,6 +97,7 @@ const detailsQuery = graphql`
         description
         author
         image
+        url
       }
     }
     metaImage: file(relativePath: { eq: "metaImage.png" }) {
