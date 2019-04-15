@@ -10,8 +10,7 @@ function SEO({ description, lang, image, meta, keywords, title }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
-        const metaImage = image || data.site.siteMetadata.image
-        console.log(data.site.siteMetadata)
+        const metaImage = image || data.metaImage.childImageSharp.fixed.src
         return (
           <Helmet
             htmlAttributes={{
@@ -97,6 +96,13 @@ const detailsQuery = graphql`
         description
         author
         image
+      }
+    }
+    metaImage: file(relativePath: { eq: "metaImage.png" }) {
+      childImageSharp {
+        fixed(width: 1200) {
+          src
+        }
       }
     }
   }

@@ -23,13 +23,6 @@ class Layout extends React.Component {
                   title
                 }
               }
-              file(relativePath: { eq: "royal-palm.png" }) {
-                childImageSharp {
-                  fluid(maxHeight: 1440) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
             }
           `}
           render={data => (
