@@ -3,6 +3,7 @@ module.exports = {
     title: `Learn Shopify Development | eComm Masters`,
     description: `Learn how to develop custom Shopify themes with this free 5-part crash course video tutorial series.`,
     author: `@arasheedphoto`,
+    image: `src/images/metaImage.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
