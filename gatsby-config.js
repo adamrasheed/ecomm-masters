@@ -19,6 +19,26 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-40235547-8",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: "4701754791",
+
+        // Include GTM in development.
+        includeInDevelopment: false,
+
+        // Specify optional GTM environment details.
+        gtmAuth: "u0hk8wlccVpyZqmarY5sEw",
+        gtmPreview: "Live",
+        dataLayerName: "GTM-WCK94FR",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `ecomm-masters`,

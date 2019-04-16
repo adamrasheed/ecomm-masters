@@ -19,6 +19,12 @@ function SEO({ description, lang, image, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            script={[
+              {
+                type: "text/javascript",
+                innerHTML: "",
+              },
+            ]}
             meta={[
               {
                 name: `description`,
