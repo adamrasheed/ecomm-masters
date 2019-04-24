@@ -15,7 +15,9 @@ class Form extends Component {
               className={`form__title ${context.state.formStatus ===
                 `success` && `was-submitted`}`}
             >
-              Sign Up &amp; Learn How to Create Custom Shopify Themes Today!
+              Ready to add Shopify theme development to your resume?
+              <br />
+              Sign Up Today!
             </h2>
             <form
               ref={context.formRef}
@@ -46,7 +48,7 @@ class Form extends Component {
                   htmlFor="inputAcceptsMarketing"
                   className="form__checkbox-label"
                 >
-                  I’d like to be notified when a premium course gets Launched
+                  I’d like to be notified when a premium course gets released
                 </label>
                 <div className="form__checkbox-box checkmark" />
               </div>

@@ -21,22 +21,22 @@ const Benefits = () => {
         <Benefit
           number="1"
           title="Setting Up Your Shopify Partner Account"
-          body="You’ll kick things off by learning how to create your own Shopify Partner account so oyu can start developing stores for yourself or clients."
+          body="You’ll kick things off by learning how to create your own Shopify Partner account so you can start developing stores for yourself or clients."
         />
         <Benefit
           number="2"
           title="Setting Up Shopify Slate"
-          body="You’ll kick things off by learning how to download and use Shopify’s own theme-scaffolding tool called Slate."
+          body="In this lesson, you'll learn how to download and use Shopify’s own theme-scaffolding tool called Slate."
         />
         <Benefit
           number="3"
           title="Developing The Home Page & Product Page"
-          body="This lesson will show you develop the home page and product page with Shopify Sections. You'll also learn how you can use Shopify sections to allow your clients to customize what they need without any code."
+          body="This lesson will show you how to develop the home page and product page with Shopify Sections. You'll also learn how you can use Shopify sections to allow your clients to customize what they need without any code."
         />
         <Benefit
           number="4"
           title="Developing The Collections Page"
-          body="This lesson with show your how to develop your collections page and add tag filters to let cusotmers easily find the products they're looking for. You'll also learn how to utilize javascript modules available in Slate."
+          body="This lesson will show you how to develop your collections page and add tag filters to let cusotmers easily find the products they're looking for. You'll also learn how to utilize javascript modules available in Slate."
         />
         <Benefit
           number="5"
