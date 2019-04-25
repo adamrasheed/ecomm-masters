@@ -26,12 +26,12 @@ const Benefits = () => {
         <Benefit
           number="2"
           title="Setting Up Shopify Slate"
-          body="In this lesson, you'll learn how to download and use Shopify’s own theme-scaffolding tool called Slate."
+          body="In this lesson, you'll learn how to download and use Shopify’s own theme-scaffolding tool called Slate and quickly get to the coding."
         />
         <Benefit
           number="3"
           title="Developing The Home Page & Product Page"
-          body="This lesson will show you how to develop the home page and product page with Shopify Sections. You'll also learn how you can use Shopify sections to allow your clients to customize what they need without any code."
+          body="Shopify Sections are components that to allow your clients to customize what they need without any code. This lesson will show you how to utilize Shopify Sections to develop the home page and product page."
         />
         <Benefit
           number="4"
@@ -40,8 +40,8 @@ const Benefits = () => {
         />
         <Benefit
           number="5"
-          title="Developing The Cart Page and Publishing Your Theme"
-          body="In this last video, you’ll learn the ins and outs of the cart page and learn how to easily make your theme live."
+          title="Styling The Cart Page and Publishing Your Theme"
+          body="In this last video, you’ll learn the ins and outs of the cart page and learn how to easily make your theme live in a headache-free way."
         />
       </div>
     </div>

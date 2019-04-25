@@ -48,7 +48,8 @@ class Form extends Component {
                   htmlFor="inputAcceptsMarketing"
                   className="form__checkbox-label"
                 >
-                  I’d like to be notified when a premium course gets released
+                  I’d like to be notified when a full-length premium course gets
+                  released
                 </label>
                 <div className="form__checkbox-box checkmark" />
               </div>
